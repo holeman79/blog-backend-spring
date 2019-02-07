@@ -22,6 +22,12 @@ insert into post(id, body, tags, title) values(21, 'content21', 'tag1,tag3', 'ti
 insert into post(id, body, tags, title) values(22, 'content22', 'tag1,tag3', 'title22');
 insert into post(id, body, tags, title) values(23, 'content23', 'tag1,tag3', 'title23');
 
+insert into Users(id, username, email, password) values(1, 'holeman90', 'holeman79@nate.com', '$2a$10$o.q9d5/Oq0b2oYCk09X56uux8RQ6pAEA5OzUpOyKO.WvOe8Ybvsa6');
+INSERT INTO roles(id, name) VALUES(1, 'ROLE_USER');
+INSERT INTO roles(id, name) VALUES(2, 'ROLE_ADMIN');
 
-insert into User(id, password, email) values('holeman79', '1234', 'holeman79@gmail.com');
-insert into User(id, password, email) values('twice', '1234', 'twice@gmail.com');
+insert into user_roles(user_id, role_id) values(1, 1);
+
+
+-- insert into User(id, password, email) values('holeman79', '1234', 'holeman79@gmail.com');
+-- insert into User(id, password, email) values('twice', '1234', 'twice@gmail.com');
