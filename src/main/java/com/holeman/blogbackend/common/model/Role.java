@@ -4,9 +4,6 @@ import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 
-/**
- * Created by rajeevkumarsingh on 01/08/17.
- */
 @Entity
 @Table(name = "roles")
 public class Role {

@@ -3,9 +3,6 @@ package com.holeman.blogbackend.payload;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * Created by rajeevkumarsingh on 19/08/17.
- */
 @Getter
 @Setter
 public class ApiResponse {

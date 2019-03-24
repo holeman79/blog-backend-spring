@@ -18,7 +18,7 @@ public class PostController {
     public Page<Post> getPostList(//@RequestParam(name="page", required=false) int page,
                                   @PageableDefault Pageable pageable,
                                   @RequestParam(name="tag", required=false) String tag){
-
+        //postService.getPostList(pageable, tag);
         return postService.getPostList(pageable, tag);
     }
     @GetMapping("/{id}")
