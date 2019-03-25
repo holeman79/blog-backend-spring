@@ -34,30 +34,6 @@ public class UserController {
 
         return new ModelAndView("login");
     }
-//    @PostMapping("/login")
-//    public ResponseEntity<User> login(@RequestBody LoginUser loginUser, HttpSession httpSession){
-//        String userId = loginUser.getLoginId();
-//        String password = loginUser.getPassword();
-//
-//        User user = userService.getUser(loginUser.getLoginId());
-//        if(user == null || !user.getPassword().equals(loginUser.getPassword())){
-//            httpSession.setAttribute("logged", false);
-//            return new ResponseEntity(null, HttpStatus.UNAUTHORIZED);
-//        }
-//
-//        //UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(userId, password);
-//        //Authentication authentication = authenticationManager.authenticate(token);
-//       // SecurityContextHolder.getContext().setAuthentication(authentication);
-//        //httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
-//        httpSession.setAttribute("logged", true);
-//        return new ResponseEntity(user, HttpStatus.OK);
-//    }
-//    @PostMapping("/login")
-//    public void login(@RequestParam(name = "loginId") String loginId, @RequestParam(name = "password") String password){
-//
-//        System.out.println(loginId + ", " + password);
-//    }
-
 
     @GetMapping("/checkLogin")
     public ResponseEntity<?> checkLogin(HttpSession httpSession){

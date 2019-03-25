@@ -15,26 +15,21 @@ public class PostController {
     PostService postService;
 
     @GetMapping
-    public Page<Post> getPostList(//@RequestParam(name="page", required=false) int page,
-                                  @PageableDefault Pageable pageable,
+    public Page<Post> getPostList(@PageableDefault Pageable pageable,
                                   @RequestParam(name="tag", required=false) String tag){
-        //postService.getPostList(pageable, tag);
         return postService.getPostList(pageable, tag);
     }
     @GetMapping("/{id}")
     public Post getPostById(@PathVariable Long id){
-
         return postService.getPostById(id);
     }
     @PostMapping
     public Post savePost(@RequestBody Post post){
-
         return postService.savePost(post);
     }
 
     @PatchMapping("/{id}")
     public Post updatePost(@PathVariable Long id, @RequestBody Post post){
-
         return postService.updatePost(id, post);
     }
 
